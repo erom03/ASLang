@@ -1,8 +1,29 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
+import { UserAuth } from "@/app/context/AuthContext";
 
 const Navbar = () => {
+  const { user, googleSignIn, logOut } = UserAuth();
+
+  const handleSignIn = async () => {
+    try {
+      await googleSignIn()
+    } catch(error) {
+      console.error(error)
+    }
+  }
+
+  const handleSignOut = async () => {
+    try {
+      await logOut()
+    } catch(error) {
+      console.error(error)
+    }
+  }
+
   return (
     <>
       <div>
@@ -27,7 +48,10 @@ const Navbar = () => {
                 <Link href="/login">
                   {/* Diego, you can leave the Button component as it is */}
                   {/*<p><Button variant="outlined" color="success">Get Started</Button></p> */}
-                  <button className="h-10 px-5 m-2 text-white transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">Regular</button>
+                  <button onClick={handleSignIn} className="h-10 px-5 m-2 text-white transition-colors duration-150 
+                                  bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
+                    Regular
+                  </button>
                 </Link>
               </li>
             </ul>

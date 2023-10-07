@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import * as React from 'react';
+import * as React from 'react'
 import Navigation from "./components/navigation";
 
 export default function Home() {
