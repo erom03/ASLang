@@ -36,7 +36,7 @@ const Logo = () => {
     <>
       <div className="flex justify-start items-center gap-x-6 text-black">
         <Image
-          src="/images/LogoWhite.png"
+          src="/icon.png"
           alt="Logo"
           title="ASLang"
           width={50}
