@@ -5,8 +5,8 @@ import Logo from "./Logo";
 const Navbar = () => {
   return (
     <>
-      <div className="sticky shadow-md NavBar">
-        <div className="container mx-auto px-1vw h-full">
+      <div>
+        <div className="container my-1   max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <div className="flex justify-between items-center h-full ml-5 mr-10">
             <Logo />
             <ul className="hidden md:flex gap-x-6 text-black">
