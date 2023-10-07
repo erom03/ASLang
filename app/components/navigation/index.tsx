@@ -1,8 +1,13 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
+import { UserAuth } from "@/app/context/AuthContext";
 
 const Navbar = () => {
+  const { user } = UserAuth();
+
   return (
     <>
       <div>
