@@ -10,9 +10,12 @@ const Navbar = () => {
       <div>
         <div className="container my-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <div className="flex justify-between items-center h-full ml-5 mr-10">
-            <Logo />
+            {/* Wrap the Logo component with a Link to the root directory */}
+            <Link href="/">
+                <Logo />
+            </Link>
             <ul className="hidden md:flex gap-x-6 text-black">
-            <li>
+              <li>
                 <Link href="/">
                   <p>Home</p>
                 </Link>
@@ -24,8 +27,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link href="/login">
-                  {/* Diego pls fix this button, tailwinds is messing with it
-                   if you can format it too that would awesome love you */}
+                  {/* Diego, you can leave the Button component as it is */}
                   <p><Button variant="contained" color="success">Get Started</Button></p>
                 </Link>
               </li>
