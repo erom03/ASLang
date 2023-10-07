@@ -4,11 +4,11 @@ import util from 'node:util';
 
 const exec = util.promisify(require('node:child_process').exec);
 
-const Lessons = () => {
+const Login = () => {
   return (
     <section>
     <header><Navigation /></header>
-    <div>lessons page here</div>
+    <div>login page goes here</div>
     <div>{/*getOutput()*/}</div>
     </section>
   )
@@ -28,4 +28,4 @@ async function getOutput() {
   return programOutput;
 }
 
-export default Lessons
+export default Login
