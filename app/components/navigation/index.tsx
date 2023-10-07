@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <>
       <div>
-        <div className="container my-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <div className="container my-1 max-w-7xl mx-auto px-4 py-2">
           <div className="flex justify-between items-center h-full ml-5 mr-10">
             {/* Wrap the Logo component with a Link to the root directory */}
             <Link href="/">
@@ -49,7 +49,7 @@ const Navbar = () => {
                   {/* Diego, you can leave the Button component as it is */}
                   {/*<p><Button variant="outlined" color="success">Get Started</Button></p> */}
                   <button onClick={handleSignIn} className="h-10 px-5 m-2 text-white transition-colors duration-150 
-                                  bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
+                                  bg-yellow-600 rounded-lg focus:shadow-outline hover:bg-yellow-700">
                     Regular
                   </button>
                 </Link>

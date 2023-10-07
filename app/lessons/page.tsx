@@ -11,10 +11,10 @@ const Lessons = () => {
     <center>
       <div className="flex-start">
         
-    <div>
-      <div className="rounded-md border border-black mx-auto p-10 w-2/3 shadow-xl">
-        text?
-      <button className="h-auto px-auto m-auto text-white transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">Regular</button>
+    <div className="p-8 border-gray-200 dark:border-gray-600">
+      <div className="flex justify-between rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mx-auto p-10 w-2/3">
+        <div>Lesson</div>
+      <div><button className="h-12 px-12 m-auto text-white transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">Regular</button></div>
     </div>
     </div>
 
