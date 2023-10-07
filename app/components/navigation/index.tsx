@@ -12,7 +12,15 @@ const Navbar = () => {
     try {
       await googleSignIn()
     } catch(error) {
-      console.log(error)
+      console.error(error)
+    }
+  }
+
+  const handleSignOut = async () => {
+    try {
+      await logOut()
+    } catch(error) {
+      console.error(error)
     }
   }
 
