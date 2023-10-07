@@ -1,18 +1,19 @@
 import { exec } from "child_process"
+import path from "path";
 
 const GetOutput = async () => {
     let programOutput = "";
-  
-    const { stdout } = exec("%cd%/app/components/get_output/test.bat");
-  
-    if(stdout) {
-      console.log("here");
-  
+    
+    const dir = path.resolve("..components")
+    
+    const { stdout } = exec(process.cwd() + "/app/components/get_output/test.bat");
+    
+    if(stdout) {      
       for await (const data of stdout) {
         programOutput += data;
       }
     }
-  
+    
     if(programOutput.includes("testing"))
       return <div>Working</div>
     else
