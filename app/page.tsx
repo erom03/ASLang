@@ -1,7 +1,5 @@
 import Image from 'next/image'
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Navigation from "./components/navigation";
 
 export default function Home() {
@@ -14,14 +12,12 @@ export default function Home() {
             <span className="text-yellow-600"> American Sign Language</span>
             <span className="block font-medium"> Journey Begins Here</span>
           </h1>
+          <p className="mb-4 text-xl">Our curriculum is free and open source</p>
           <div className="pb-8 max-w-xl mx-auto">
-            <p className="mb-4 text-xl">Our curriculum is free and open source</p>
-
             {/* Change the button text and outline color to yellow using sx prop 
             unfortunately cant figure out how to change the hover color to yellow 
             need to change the hex value for yellow to be precisely the one of the lion */}
-            {/*<Button variant="outlined" color="primary" href="lessons" sx={{ color: '#FFD600', borderColor: '#FFD600', padding: '10px 20px'  }}>View Our Courses</Button>*/}
-            <button className="h-10 px-5 m-2 text-white transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">Regular</button>
+            <button className="h-10 px-5 text-indigo-700 transition-colors duration-150 border border-indigo-500 rounded-lg focus:shadow-outline hover:bg-indigo-500 hover:text-indigo-100">Outline</button>
           </div>
         </div>
 

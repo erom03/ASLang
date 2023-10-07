@@ -2,33 +2,37 @@ import React from 'react';
 import Navigation from "../components/navigation";
 import GetOutput from "../components/get_output"
 import util from 'node:util';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 
 const exec = util.promisify(require('node:child_process').exec);
-
-// Define the BasicStack function outside of JSX
-function BasicStack() {
-  return (
-    <Box sx={{ width: '100%' }}>
-      {/* Center align the Stack */}
-      <Stack spacing={6} sx={{ alignItems: 'center', justifyContent: 'center' }}>
-        <Button variant="outlined" color="error" href="lessons"> View Our Courses </Button>
-        <Button variant="outlined" color="error" href="lessons"> View Our Courses </Button>
-        <Button variant="outlined" color="error" href="lessons"> View Our Courses </Button>
-      </Stack>
-    </Box>
-  );
-}
 
 const Lessons = () => {
   return (
     <section>
-      <BasicStack /> {/* Use the BasicStack component here */}
-      <div>lessons page here</div>
-      <GetOutput />
-    </section>
+    <center>
+      <div className="flex-start">
+        
+    <div>
+      <div className="rounded-md border border-black mx-auto p-10 w-2/3 shadow-xl">
+        text?
+      <button className="h-auto px-auto m-auto text-white transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">Regular</button>
+    </div>
+    </div>
+
+    <div>
+      <button className="h-auto px-auto m-auto text-white transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">Regular</button>
+    </div>
+    <div>
+      <button className="">Regular</button>
+    </div>
+    <div>
+      <button className="">Regular</button>
+    </div>  
+      
+      </div>
+      test
+    </center>
+      test 2 no center!
+      </section>
   )
 }
 
