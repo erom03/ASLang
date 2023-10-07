@@ -7,7 +7,6 @@ import Navigation from "../components/navigation";
 export default function Login()  {
   return (
     <section>
-    <header><Navigation /></header>
     <div>login page goes here</div>
     </section>
   )

@@ -25,7 +25,6 @@ function BasicStack() {
 const Lessons = () => {
   return (
     <section>
-      <header><Navigation /></header>
       <BasicStack /> {/* Use the BasicStack component here */}
       <div>lessons page here</div>
       <GetOutput />
