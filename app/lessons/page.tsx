@@ -8,9 +8,9 @@ const exec = util.promisify(require('node:child_process').exec);
 const Lessons = () => {
   return (
     <section>
-    <header><Navigation /></header>
-    <div>lessons page here</div>
-    <GetOutput />
+      <header><Navigation /></header>
+            <div>lessons page here</div>
+      <GetOutput />
     </section>
   )
 }
