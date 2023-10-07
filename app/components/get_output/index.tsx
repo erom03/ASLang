@@ -2,8 +2,10 @@ import { exec } from "child_process"
 
 const GetOutput = async () => {
     let programOutput = "";
+
+    let path = process.cwd() + "/app/components/get_output/test.py";
         
-    const { stdout } = exec(process.cwd() + "/app/components/get_output/test.bat");
+    const { stdout } = exec('python ' + path);
     
     if(stdout) {      
       for await (const data of stdout) {
