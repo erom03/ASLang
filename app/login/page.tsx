@@ -4,7 +4,7 @@ import { signOut, useSession } from 'next-auth/react'
 import React from 'react';
 import Navigation from "../components/navigation";
 
-const Login = () => {
+export default function Login()  {
   return (
     <section>
     <header><Navigation /></header>
@@ -12,5 +12,3 @@ const Login = () => {
     </section>
   )
 }
-
-export default Login
