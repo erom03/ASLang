@@ -18,6 +18,16 @@ export default function Home() {
         </div>
       </div>
 
+      <Image
+      src="/icon.png"
+      alt="Image"
+      width="0"
+      height="0"
+      sizes="fit"
+      className="w-full h-auto"
+      />
+
+
       </main>
     </section>
   );
