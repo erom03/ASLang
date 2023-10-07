@@ -34,7 +34,7 @@ const Logo = () => {
 
   return (
     <>
-      <div className="flex justify-start items-center gap-x-6 text-black">
+      <div className="flex justify-start items-center gap-x-6 text-black font-serif">
         <Image
           src="/icon.png"
           alt="Logo"
