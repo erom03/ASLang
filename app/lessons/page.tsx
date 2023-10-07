@@ -3,7 +3,6 @@ import Navigation from "../components/navigation";
 import GetOutput from "../components/get_output"
 import util from 'node:util';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
