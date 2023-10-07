@@ -21,9 +21,8 @@ export default function Home() {
             {/* Change the button text and outline color to yellow using sx prop 
             unfortunately cant figure out how to change the hover color to yellow 
             need to change the hex value for yellow to be precisely the one of the lion */}
-            <Button variant="outlined" color="primary" href="lessons" sx={{ color: '#FFD600', borderColor: '#FFD600', padding: '10px 20px'  }}>
-              View Our Courses
-            </Button>
+            {/*<Button variant="outlined" color="primary" href="lessons" sx={{ color: '#FFD600', borderColor: '#FFD600', padding: '10px 20px'  }}>View Our Courses</Button>*/}
+            <button className="h-10 px-5 m-2 text-white transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">Regular</button>
           </div>
         </div>
 

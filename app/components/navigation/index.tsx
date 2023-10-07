@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
 
 const Navbar = () => {
   return (
@@ -28,7 +26,8 @@ const Navbar = () => {
               <li>
                 <Link href="/login">
                   {/* Diego, you can leave the Button component as it is */}
-                  <p><Button variant="contained" color="success">Get Started</Button></p>
+                  {/*<p><Button variant="outlined" color="success">Get Started</Button></p> */}
+                  <button className="h-10 px-5 m-2 text-white transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">Regular</button>
                 </Link>
               </li>
             </ul>
