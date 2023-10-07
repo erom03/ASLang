@@ -23,7 +23,7 @@ export default function Home() {
       </div>
 
       <Image
-      src="/icon.png"
+      src="/Images/logoBW.png"
       alt="Image"
       width="0"
       height="0"
