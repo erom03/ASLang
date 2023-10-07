@@ -1,31 +1,34 @@
 import React from 'react';
 import Navigation from "../components/navigation";
-import util from 'node:util';
-
-const exec = util.promisify(require('node:child_process').exec);
+import { exec } from "child_process"
 
 const page = () => {
   return (
     <section>
     <header><Navigation /></header>
     <div>lessons page here</div>
-    <div>{/*getOutput()*/}</div>
+    <GetOutput />
     </section>
   )
 }
 
-async function getOutput() {
+const GetOutput = async () => {
   let programOutput = "";
 
-  const { stdout } = await exec('/test.bat');
+  const { stdout } = exec("%cd%/app/lessons/test.bat");
 
   if(stdout) {
+    console.log("here");
+
     for await (const data of stdout) {
       programOutput += data;
     }
   }
 
-  return programOutput;
-}
+  if(programOutput.includes("testing"))
+    return <div>Working</div>
+  else
+    return <div>Working</div>
+};
 
 export default page
