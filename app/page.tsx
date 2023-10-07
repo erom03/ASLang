@@ -7,7 +7,6 @@ import Navigation from "./components/navigation";
 export default function Home() {
   return (
     <section>
-      <header><Navigation /></header>
       <main>
         <div className="max-w-4xl mx-auto sm:pt-16 text-center">
           <h1 className="text-4xl sm:text-6xl font-medium mx-auto pb-6 tracking-tighter">
