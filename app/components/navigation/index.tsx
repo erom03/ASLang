@@ -35,6 +35,7 @@ const Navbar = () => {
                 <Logo />
             </Link>
             <ul className="hidden md:flex gap-x-6 text-black">
+              <section className="hidden md:flex gap-x-6 text-black m-auto"> {/*PUT ALL TEXT NAVBAR HERE!!!!*/}
               <li>
                 <Link href="/">
                   <p>Home</p>
@@ -45,6 +46,7 @@ const Navbar = () => {
                   <p>Lessons</p>
                 </Link>
               </li>
+              </section>
               <li>
                 {!user ? (
                     <button onClick={handleSignIn} className="h-10 px-5 m-2 text-white transition-colors duration-150 
