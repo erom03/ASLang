@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 const Navbar = () => {
   return (
@@ -17,6 +19,9 @@ const Navbar = () => {
               </li>
               <li>
                 <Link href="/lessons">
+                  {/* Diego pls fix this button, tailwinds is messing with it
+                   if you can format it too that would awesome love you */}
+                  <p><Button variant="contained" color="success">Get Started</Button></p> 
                   <p>LessonsTab</p>
                 </Link>
               </li>
