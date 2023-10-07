@@ -1,18 +1,19 @@
 import React from 'react';
-import Navigation from "../components/navigation";
 import GetOutput from "../components/get_output"
 import util from 'node:util';
+import Webcam from "react-webcam";
 
 
 const exec = util.promisify(require('node:child_process').exec);
 
-const Lessons = () => {
+const Webcam_Test = () => {
   return (
+    <Webcam></Webcam>
     <section>
-      <div>lessons page here</div>
+      <div></div>
       <GetOutput />
     </section>
   )
 }
 
-export default Lessons;
+export default Webcam_Test;
