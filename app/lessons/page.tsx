@@ -1,8 +1,12 @@
 import React from 'react'
+import Navigation from "../components/navigation";
 
 const page = () => {
   return (
-    <div>page</div>
+    <section>
+    <header><Navigation /></header>
+    <div>lessons page here</div>
+    </section>
   )
 }
 
