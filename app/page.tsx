@@ -18,7 +18,7 @@ export default function Home() {
         </h1>
         <div className="  pb-8 max-w-xl mx-auto">
           <p className="mb-4 text-xl ">Our American Sign Language curriculum is free and open source</p>
-          <Button variant="outlined">View Our Courses</Button>
+<Button variant="outlined" color="error">View Our Courses</Button>
         </div>
       </div>
 
