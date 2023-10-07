@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { UserAuth } from "@/app/context/AuthContext";
+import { signOut } from "firebase/auth";
 
 const Navbar = () => {
   const { user, googleSignIn, logOut } = UserAuth();
@@ -45,14 +46,17 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/login">
-                  {/* Diego, you can leave the Button component as it is */}
-                  {/*<p><Button variant="outlined" color="success">Get Started</Button></p> */}
-                  <button onClick={handleSignIn} className="h-10 px-5 m-2 text-white transition-colors duration-150 
-                                  bg-yellow-600 rounded-lg focus:shadow-outline hover:bg-yellow-700">
-                    Regular
-                  </button>
-                </Link>
+                {!user ? (
+                    <button onClick={handleSignIn} className="h-10 px-5 m-2 text-white transition-colors duration-150 
+                                   bg-green-600 rounded-lg focus:shadow-outline hover:bg-green-700">
+                      Sign In
+                    </button>
+                  ) : (
+                    <button onClick={handleSignOut} className="h-10 px-5 m-2 text-white transition-colors duration-150 
+                                   bg-red-600 rounded-lg focus:shadow-outline hover:bg-red-700">
+                      Sign Out
+                    </button>
+                )}
               </li>
             </ul>
           </div>
