@@ -19,10 +19,14 @@ const Navbar = () => {
               </li>
               <li>
                 <Link href="/lessons">
+                  <p>Lessons</p>
+                </Link>
+              </li>
+              <li>
+                <Link href="/login">
                   {/* Diego pls fix this button, tailwinds is messing with it
                    if you can format it too that would awesome love you */}
-                  <p><Button variant="contained" color="success">Get Started</Button></p> 
-                  <p>LessonsTab</p>
+                  <p><Button variant="contained" color="success">Get Started</Button></p>
                 </Link>
               </li>
             </ul>
