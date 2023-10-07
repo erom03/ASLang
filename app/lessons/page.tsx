@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from "../components/navigation";
-import { exec } from "child_process"
+import GetOutput from "../components/get_output"
 
 const page = () => {
   return (
@@ -11,24 +11,5 @@ const page = () => {
     </section>
   )
 }
-
-const GetOutput = async () => {
-  let programOutput = "";
-
-  const { stdout } = exec("%cd%/app/lessons/test.bat");
-
-  if(stdout) {
-    console.log("here");
-
-    for await (const data of stdout) {
-      programOutput += data;
-    }
-  }
-
-  if(programOutput.includes("testing"))
-    return <div>Working</div>
-  else
-    return <div>Working</div>
-};
 
 export default page
