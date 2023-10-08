@@ -5,9 +5,6 @@ const introLessonA = () => {
   return (
     <section>
         <VideoInput />
-        <div>
-            Text
-        </div>
     </section>
   )
 }
