@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { UserAuth } from "@/app/context/AuthContext";
+import { auth, db, writeUserData } from "@/app/firebase";
+import { ref } from "firebase/database";
 
 const Navbar = () => {
   const { user, googleSignIn, logOut } = UserAuth();
@@ -11,6 +13,7 @@ const Navbar = () => {
   const handleSignIn = async () => {
     try {
       await googleSignIn()
+      writeUserData(user, 0)
     } catch(error) {
       console.error(error)
     }
