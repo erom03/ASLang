@@ -1,20 +1,27 @@
-import { useEffect, useState } from 'react';
+'use client'
+
+import { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
 
 const socket = io('http://localhost:5000/video'); // Replace with your Flask server URL
 
 export default function GetVideo() {
-  const [videoSrc, setVideoSrc] = useState('');
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     socket.on('connect', () => {
       console.log('Connected to WebSocket');
     });
 
-    socket.on('video_frame', (frame) => {
-      // Handle incoming video frame data
-      // Update the videoSrc state with the frame data
-      setVideoSrc(frame);
+    socket.on('video_frame', (frameData: Blob) => {
+      // Log the received frame data
+      console.log('Received frame data:', frameData);
+
+      // Create a URL for the Blob object
+      const blobUrl = URL.createObjectURL(frameData);
+
+      // Update the video element with the URL of the Blob
+      videoRef.current!.src = blobUrl;
     });
 
     return () => {
@@ -26,13 +33,11 @@ export default function GetVideo() {
   return (
     <div>
       <h1>Video Stream</h1>
-      {videoSrc && (
-        <video
-          src={`data:image/jpeg;base64,${videoSrc}`} // Assuming video frames are base64 encoded
-          autoPlay
-          controls
-        ></video>
-      )}
+      <video
+        ref={videoRef}
+        autoPlay
+        controls
+      ></video>
     </div>
   );
 }

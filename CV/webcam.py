@@ -117,12 +117,15 @@ from cvzone.HandTrackingModule import HandDetector
 from cvzone.ClassificationModule import Classifier
 import numpy as np
 import math
+from flask_socketio import SocketIO
 import time
 
 app = Flask(__name__)
 
 # Open the default camera (webcam)
 cap = cv2.VideoCapture(0)
+
+socketio = SocketIO(app, cors_allowed_origins="http://localhost:3000")
 
 # Function to generate video frames
 def generate_frames():
@@ -174,15 +177,20 @@ def generate_frames():
 
             cv2.putText(frame, labels[index], (x+80, y-30), cv2.FONT_HERSHEY_COMPLEX, 2, (255, 0, 255), 2)
 
-        ret, buffer = cv2.imencode('.jpg', frame)
+        ret, buffer = cv2.imencode('.jpeg', frame)
         if not ret:
             continue
-        yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + buffer.tobytes() + b'\r\n')
+        yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + buffer.tobytes() + b'\r\n')
+
+@socketio.on('connect')
+def handle_connect():
+    print('Client connected')
 
 @app.route('/video')
 def video():
+    print('things happened')
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0")
+    socketio.run(app, debug=True, host="0.0.0.0")
+    #app.run(debug=True, host="0.0.0.0")
