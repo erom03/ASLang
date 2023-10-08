@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import {titleFont, textFont, testFont} from "../../../util/fonts"
 
 const Logo = () => {
   //update the size of the logo when the size of the screen changes
@@ -34,7 +35,7 @@ const Logo = () => {
 
   return (
     <>
-      <div className="flex justify-start items-center gap-x-6 text-black font-serif">
+      <div className="flex justify-start items-center gap-x-6 text-black">
         <Image
           src="/icon.png"
           alt="Logo"
@@ -42,7 +43,7 @@ const Logo = () => {
           width={50}
           height={50}
           className="relative"
-          /> ASLang
+          /> <p className={titleFont.className}>ASLang</p> {/*logo font if included*/}
       </div>
 
       <div
