@@ -16,7 +16,7 @@ const Lessons = () => {
   return (
     
       <div className="flex flex-col items-center justify-center gap-6">
-      <LessonCard lessonName='Lesson 1: A' parentToChild={'/'} isSolvable={true}/>
+      <LessonCard lessonName='Lesson 1: A' parentToChild={'/lessons/subLessons/introLessonA'} isSolvable={true}/>
       <LessonCard lessonName='Lesson 2: B' parentToChild={'/'} isSolvable={false}/>
       <LessonCard lessonName='Lesson 3: C' parentToChild={'/'} isSolvable={false}/> 
       <LessonCard lessonName='Lesson 4: D' parentToChild={'/'} isSolvable={false}/>
