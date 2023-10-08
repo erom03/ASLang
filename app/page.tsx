@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import * as React from 'react'
-import Navigation from "./components/navigation";
+// pages/index.js (or pages/index.tsx if you are using TypeScript)
+import Image from 'next/image';
+import * as React from 'react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -15,9 +15,6 @@ export default function Home() {
           </h1>
           <p className="mb-4 text-xl">Our curriculum is free and open source</p>
           <div className="pb-8 max-w-xl mx-auto">
-            {/* Change the button text and outline color to yellow using sx prop 
-            unfortunately cant figure out how to change the hover color to yellow 
-            need to change the hex value for yellow to be precisely the one of the lion */}
             <Link href="/lessons">
               <button className="h-10 px-5 text-yellow-600 transition-colors duration-150 border border-yellow-600 rounded-lg focus:shadow-outline hover:bg-yellow-600 hover:text-yellow-100">Outline</button>
             </Link>
@@ -35,4 +32,14 @@ export default function Home() {
       </main>
     </section>
   );
+}
+
+// Export the rewrites configuration
+export function rewrites() {
+  return [
+    {
+      source: "/hello/:path*",
+      destination: "http://localhost:5000/hello/:path*",
+    },
+  ];
 }
