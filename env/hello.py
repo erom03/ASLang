@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_restful import reqparse, Api, Resource
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
 
 parser = reqparse.RequestParser()
@@ -11,4 +13,4 @@ class Message(Resource):
 api.add_resource(Message, '/api/hello')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port = 8080)
