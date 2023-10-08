@@ -13,7 +13,7 @@ const VideoInput = () => {
         <div className="w-1/3">    
             <div className="aspect-square rounded-lg shadow-md ring-1 ring-black ring-opacity-5 grid place-content-center">
                 <div className="grid place-content-center p-4">
-                    Let's see that A sign!
+                    Let&apos;s see that A sign!
                 </div>
                     <Image
                         src="/Images/signA.png"
