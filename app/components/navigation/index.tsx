@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { UserAuth } from "@/app/context/AuthContext";
-import { signOut } from "firebase/auth";
 
 const Navbar = () => {
   const { user, googleSignIn, logOut } = UserAuth();
