@@ -25,7 +25,7 @@ const LessonCard = (props : props, parentToChild : props) => {
             <div>    
               <div className="flex justify-between rounded-lg shadow-md ring-1 ring-black ring-opacity-5 mx-auto p-10 w-2/3">
                   <div className="my-auto">{props.lessonName}</div>
-                  <div><button className="font-bold h-12 px-12 m-auto text-white transition-colors duration-150 bg-red-700 rounded-lg focus:shadow-outline hover:bg-red-800">Begin</button></div>
+                  <div><button className="font-bold h-12 px-12 m-auto text-white transition-colors duration-150 bg-zinc-500 rounded-lg focus:shadow-outline hover:bg-zinc-600">Locked</button></div>
               </div>
             </div>
           )

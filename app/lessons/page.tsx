@@ -1,8 +1,6 @@
 import React from 'react';
 import GetOutput from "../components/getOutput"
 import util from 'node:util';
-import { auth, db } from '../firebase';
-import { onValue, ref } from 'firebase/database';
 import LessonCard from '../components/LessonCard';
 
 const exec = util.promisify(require('node:child_process').exec);
