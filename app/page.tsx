@@ -19,7 +19,7 @@ export default function Home() {
             unfortunately cant figure out how to change the hover color to yellow 
             need to change the hex value for yellow to be precisely the one of the lion */}
             <Link href="/lessons">
-              <button className="h-10 px-5 text-yellow-600 transition-colors duration-150 border border-yellow-600 rounded-lg focus:shadow-outline hover:bg-yellow-600 hover:text-yellow-100">Outline</button>
+              <button className="h-10 px-5 text-yellow-600 transition-colors duration-150 border border-yellow-600 rounded-lg focus:shadow-outline hover:bg-yellow-600 hover:text-yellow-100">Browse Lessons</button>
             </Link>
           </div>
         </div>
